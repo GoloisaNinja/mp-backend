@@ -38,14 +38,6 @@ app.use('/api/watched', watched);
 // 	});
 // }
 
-app.get('*', (req, res) => {
-	try {
-		res.sendFile(path.join(__dirname, 'build/index.html'));
-	} catch (error) {
-		res.status(500).send(error);
-	}
-});
-
 const PORT = process.env.PORT || 5000;
 
 // listen for server
