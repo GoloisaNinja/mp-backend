@@ -39,7 +39,7 @@ app.use('/api/watched', watched);
 // }
 
 app.get('*', (req, res) => {
-	res.redirect('https://www.wewatch.pw/');
+	res.redirect(req.originalUrl);
 });
 
 const PORT = process.env.PORT || 5000;
