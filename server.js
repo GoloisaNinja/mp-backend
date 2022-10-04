@@ -38,6 +38,10 @@ app.use('/api/watched', watched);
 // 	});
 // }
 
+app.get('*', (req, res) => {
+	res.redirect('https://www.wewatch.pw/');
+});
+
 const PORT = process.env.PORT || 5000;
 
 // listen for server
